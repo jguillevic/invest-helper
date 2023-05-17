@@ -7,20 +7,22 @@ use \Framework\Tools\Helper\RoutesHelper;
 <head>
 	<meta charset="UTF-8">
 	<title>Aide impôts</title>
-	<link rel="stylesheet" type="text/css" href="../Assets/css/style.css"> 	
+	<link rel="stylesheet" type="text/css" href="../Assets/css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
+	<script type="text/javascript" src="../Assets/js/jquery/jquery-3.3.1.min.js"></script>	
 </head>
 <body>
 	<header class="l-header header">
 		<nav class="nav">
 			<section class="nav__brand">
-				<a class="nav__brand__logo" href="<?= RoutesHelper::Path("DisplayHome"); ?>">Calcul mes impôts</a>
-				<span class="nav__brand__complement">Tout ce qu'il faut pour calculer tes impôts</span>
+				<a class="nav__brand__logo" href="<?= RoutesHelper::Path("DisplayHome"); ?>">Calcule mes impôts</a>
+				<span class="nav__brand__complement">Tout ce qu'il faut pour calculer ses impôts</span>
 			</section>
 			<section class="nav__menu">
 				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--home">Accueil</a>
-				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--about">A propos</a>
+				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--calculator">Calculettes</a>
+				<a href="<?= RoutesHelper::Path("DisplayPremiumTaxCalculatorForm"); ?>" class="nav__menu__item--about">A propos</a>
 			</section>
 		</nav>
 	</header>

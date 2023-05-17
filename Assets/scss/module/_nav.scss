@@ -116,6 +116,16 @@
 			}
 		}
 
+		&__item--calculator
+		{
+			@extend .nav__menu__item;
+
+			&::before
+			{
+				content: "\f1ec";
+			}
+		}
+
 		&__item--user-account
 		{
 			@extend .nav__menu__item;

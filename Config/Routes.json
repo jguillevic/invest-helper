@@ -12,9 +12,9 @@
 		, "Name":"DisplayPremiumTaxCalculatorForm"
 	},
 	{
-		"Path":"/calculator/premium-tax-calc"
+		"Path":"/calculator/premium-tax/calc/json"
 		, "Controller":"Calculator\\PremiumTax\\PremiumTaxCalculatorController"
-		, "Action":"DisplayCalcResult"
-		, "Name":"DisplayPremiumTaxCalculatorCalcResult"
+		, "Action":"GetJsonCalcResult"
+		, "Name":"GetPremiumTaxCalculatorJsonCalcResult"
 	}
 ]

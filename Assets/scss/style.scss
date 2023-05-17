@@ -12,12 +12,15 @@
 @import 'layout/main';
 
 /* Module */
+@import 'module/home/home';
 @import 'module/button';
 @import 'module/content';
 @import 'module/footer';
+@import 'module/form';
 @import 'module/header';
-@import 'module/home';
 @import 'module/main';
 @import 'module/nav';
+@import 'module/result';
+@import 'module/title';
 
 /* Theme */
