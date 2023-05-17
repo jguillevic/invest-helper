@@ -1,0 +1,41 @@
+<?php
+use \Framework\Tools\Helper\RoutesHelper;
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aide impôts</title>
+	<link rel="stylesheet" type="text/css" href="../Assets/css/style.css"> 	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
+</head>
+<body>
+	<header class="l-header header">
+		<nav class="nav">
+			<section class="nav__brand">
+				<a class="nav__brand__logo" href="<?= RoutesHelper::Path("DisplayHome"); ?>">Calcul mes impôts</a>
+				<span class="nav__brand__complement">Tout ce qu'il faut pour calculer tes impôts</span>
+			</section>
+			<section class="nav__menu">
+				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--home">Accueil</a>
+				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--about">A propos</a>
+			</section>
+		</nav>
+	</header>
+	<main class="l-main main">
+		<?php
+			if (isset($this->content))
+			{
+				include($this->content);
+			} 
+		?>
+	</main>
+	<!-- <footer class="l-footer footer">
+		<p class="footer__copyright">
+			Calcul mes impôts © Copyright 2023
+		</p>
+	</footer> -->
+</body>
+</html>

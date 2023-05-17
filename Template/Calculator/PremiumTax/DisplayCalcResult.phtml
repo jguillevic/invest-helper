@@ -1,0 +1,8 @@
+<section>
+<p>Pour une prime de <?= $params['grossAmount'] ?>€ brute, vous toucherez réellement <?= round($params['netAmount'], 2)  ?>€.</p>
+<p>La différence correspond au prélévement de <?= ($params['csgRate'] + $params['crdsRate']) * 100 ?>% au titre de la csg/crds soit <?= round($params['csgAndCrdsAmount'], 2) ?>€.</p>
+<p>Le taux de la csg est de <?= $params['csgRate'] * 100 ?>%.</p>
+<p>Celui de la crds est de <?= $params['crdsRate'] * 100 ?>%.</p>
+<p></p>
+<p>Avec une tranche marginale d'imposition à <?= $params['marginalTaxBracket'] * 100 ?>%, vous paierez <?= round($params['incomeTax'], 2) ?>€ d'impôts sur le revenu en plus.</p>
+</section>

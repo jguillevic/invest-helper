@@ -1,0 +1,134 @@
+.home
+{
+    width: 100%;
+
+    &__container
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &:first-child
+        {
+            margin-bottom: 2%;
+        }
+    }
+
+    &__event
+    {
+        width: 78%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__social
+    {
+        width: 20%;
+        display: grid;
+        grid-gap: 3%;
+        overflow-wrap: break-word;
+        color: $main-light;
+        text-align: center;
+
+        &__button
+        {
+            font-size: 3em;
+            display: block;
+            height: auto;
+            width: 100%;
+            transition: background-color 0.3s;
+            box-shadow: $shadow;
+
+            &:hover
+            {
+                background-color: $main-color;
+                cursor: pointer;
+            }
+
+            & i
+            {
+                padding-top: 0.8em;
+            }
+        }
+
+        &__button--facebook
+        {
+            @extend .home__social__button;
+
+            grid-row: 1;
+            grid-column: 1;
+            background-color: $facebook-color;
+        }
+
+        &__button--twitter
+        {
+            @extend .home__social__button;
+
+            grid-row: 1;
+            grid-column: 2;
+            background-color: $twitter-color;
+        }
+
+        &__button--instagram
+        {
+            @extend .home__social__button;
+
+            grid-row: 2;
+            grid-column: 1;
+            background-color: $instagram-color;
+        }
+
+        &__button--youtube
+        {
+            @extend .home__social__button;
+
+            grid-row: 2;
+            grid-column: 2;
+            background-color: $youtube-color;
+        }
+    }
+
+    &__instagram
+    {
+        width: 20%;
+        display: block;
+        overflow: hidden;
+
+        & > a
+        {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5%;
+            background-color: $main-color;
+            overflow: hidden;
+
+            & > img
+            {
+                display: block;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                transition-property: opacity transform;
+                transition-duration: 0.3s;
+
+                &:hover
+                {
+                    opacity: 0.7;
+                    transform: scale(1.2);
+                }
+            }
+
+            &:last-child
+            {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__blog
+    {
+        width: 78%;
+    }
+}

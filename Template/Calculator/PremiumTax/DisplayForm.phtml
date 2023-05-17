@@ -1,0 +1,24 @@
+<?php
+use \Framework\Tools\Helper\RoutesHelper;
+?>
+
+<section>
+	<form action="<?= RoutesHelper::Path("DisplayPremiumTaxCalculatorCalcResult"); ?>" method="post">
+		<div>
+			<label for="gross-amount">Montant brut de la prime en € : </label>
+			<input type="text" id="gross-amount" name="gross-amount" required>
+		</div>
+		<div>
+			<label for="marginal-tax-bracket">Tranche marginal d'imposition : </label>
+			<select name="marginal-tax-bracket" id="marginal-tax-bracket">
+    			<option value="0">0%</option>
+    			<option value="0.11" selected>11%</option>
+    			<option value="0.30">30%</option>
+    			<option value="0.45">45%</option>
+			</select>
+		</div>
+		<div>
+			<input type="submit" value="Calculer">
+		</div>
+	</form>
+</section>

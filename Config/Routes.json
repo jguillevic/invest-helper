@@ -1,0 +1,20 @@
+[
+	{
+		"Path":"/"
+		, "Controller":"Home\\HomeController"
+		, "Action":"Display"
+		, "Name":"DisplayHome"
+	},
+	{
+		"Path":"/calculator/premium-tax"
+		, "Controller":"Calculator\\PremiumTax\\PremiumTaxCalculatorController"
+		, "Action":"DisplayForm"
+		, "Name":"DisplayPremiumTaxCalculatorForm"
+	},
+	{
+		"Path":"/calculator/premium-tax-calc"
+		, "Controller":"Calculator\\PremiumTax\\PremiumTaxCalculatorController"
+		, "Action":"DisplayCalcResult"
+		, "Name":"DisplayPremiumTaxCalculatorCalcResult"
+	}
+]
