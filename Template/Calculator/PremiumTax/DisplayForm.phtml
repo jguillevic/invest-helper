@@ -27,12 +27,14 @@ use \Framework\Tools\Helper\RoutesHelper;
 </section>
 
 <script>
-var calcForm = $("#calc-form");
+let calcForm = $("#calc-form");
 calcForm.on("submit", function(e)
 {
 	e.preventDefault();
 
-	$.post("http://localhost/calculator/premium-tax/calc/json", calcForm.serialize(), function(data) 
+	let url = new URL("/calculator/premium-tax/calc/json", window.location.origin);
+
+	$.post(url, calcForm.serialize(), function(data) 
 	{	
 		var resultArea = $("#result");
 		resultArea.addClass("result");
@@ -41,7 +43,7 @@ calcForm.on("submit", function(e)
 
   		$("#result").html("<div class=\"result-content\"><div class=\"result-content-block\"><p>Pour une prime de " 
 		+ json.grossAmount 
-		+ "€ brute, vous toucherez réellement " + json.netAmount + "€.</p></div><div class=\"result-content-block\"><p>Avec une tranche marginale d'imposition à " 
+		+ "€ brut, vous toucherez réellement " + json.netAmount + "€.</p></div><div class=\"result-content-block\"><p>Avec une tranche marginale d'imposition à " 
 		+ json.marginalTaxBracket * 100 
 		+ "%, vous paierez " 
 		+ json.incomeTax 

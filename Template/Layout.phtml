@@ -8,21 +8,28 @@ use \Framework\Tools\Helper\RoutesHelper;
 	<meta charset="UTF-8">
 	<title>Aide impôts</title>
 	<link rel="stylesheet" type="text/css" href="../Assets/css/style.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
-	<script type="text/javascript" src="../Assets/js/jquery/jquery-3.3.1.min.js"></script>	
+	<script type="text/javascript" src="../Assets/js/jquery/jquery-3.3.1.min.js"></script>
+	<!--Adsense-->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6876567904210353"
+     crossorigin="anonymous"></script>	
 </head>
 <body>
 	<header class="l-header header">
 		<nav class="nav">
 			<section class="nav__brand">
-				<a class="nav__brand__logo" href="<?= RoutesHelper::Path("DisplayHome"); ?>">Calcule mes impôts</a>
-				<span class="nav__brand__complement">Tout ce qu'il faut pour calculer ses impôts</span>
+				<a class="nav__brand__logo" href="<?= RoutesHelper::Path("DisplayHome"); ?>">123Invest</a>
+				<span class="nav__brand__complement">L'investissement pour les débutants</span>
 			</section>
 			<section class="nav__menu">
-				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--home">Accueil</a>
-				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--calculator">Calculettes</a>
-				<a href="<?= RoutesHelper::Path("DisplayPremiumTaxCalculatorForm"); ?>" class="nav__menu__item--about">A propos</a>
+				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--start">Débuter</a>
+				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--spending">Dépenses</a>
+				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--stock-market">Bourse</a>
+				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--real-estate">Immobilier</a>
+				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--crowdfunding">Crowdfunding</a>
+				<a href="<?= RoutesHelper::Path("DisplayHome"); ?>" class="nav__menu__item--sponsorship">Parrainage</a>
+				<a href="<?= RoutesHelper::Path("DisplayContact"); ?>" class="nav__menu__item--contact">Contact</a>
 			</section>
 		</nav>
 	</header>

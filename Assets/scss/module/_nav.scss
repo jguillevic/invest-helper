@@ -76,43 +76,13 @@
 			}
 		}
 
-		&__item--home
+		&__item--real-estate
 		{
 			@extend .nav__menu__item;
 
 			&::before
 			{
 				content: "\f015";
-			}
-		}
-
-		&__item--blog
-		{
-			@extend .nav__menu__item;
-
-			&::before
-			{
-				content: "\f075";
-			}
-		}
-
-		&__item--event
-		{
-			@extend .nav__menu__item;
-
-			&::before
-			{
-				content: "\f133";
-			}
-		}
-
-		&__item--about
-		{
-			@extend .nav__menu__item;
-
-			&::before
-			{
-				content: "\f129";
 			}
 		}
 
@@ -126,23 +96,63 @@
 			}
 		}
 
-		&__item--user-account
+		&__item--start
 		{
 			@extend .nav__menu__item;
 
 			&::before
 			{
-				content: "\f007";
+				content: "\f135";
 			}
 		}
 
-		&__item--administration
+		&__item--spending
 		{
 			@extend .nav__menu__item;
 
 			&::before
 			{
-				content: "\f508";
+				content: "\f153";
+			}
+		}
+
+		&__item--stock-market
+		{
+			@extend .nav__menu__item;
+
+			&::before
+			{
+				content: "\e098";
+			}
+		}
+
+		&__item--crowdfunding
+		{
+			@extend .nav__menu__item;
+
+			&::before
+			{
+				content: "\f1b3";
+			}
+		}
+
+		&__item--sponsorship
+		{
+			@extend .nav__menu__item;
+
+			&::before
+			{
+				content: "\f06b";
+			}
+		}
+
+		&__item--contact
+		{
+			@extend .nav__menu__item;
+
+			&::before
+			{
+				content: "\f0e0";
 			}
 		}
 	}

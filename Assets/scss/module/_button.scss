@@ -6,13 +6,14 @@
 	color: $main-light;
 	background-color: $main-color;
 	padding: 0.7em;
-	transition: background-color 0.3s, color 0.3s;
+	transition: background-color 0.3s, color 0.3s, transform 0.3s;
 	text-transform: uppercase;
 
 	&:hover
 	{
 		cursor: pointer;
 		background-color: $secondary-color;
+		transform: scale(1.2);
 	}
 
 	&::before

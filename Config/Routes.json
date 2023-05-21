@@ -6,6 +6,12 @@
 		, "Name":"DisplayHome"
 	},
 	{
+		"Path":"/contact"
+		, "Controller":"Contact\\ContactController"
+		, "Action":"Display"
+		, "Name":"DisplayContact"
+	},
+	{
 		"Path":"/calculator/premium-tax"
 		, "Controller":"Calculator\\PremiumTax\\PremiumTaxCalculatorController"
 		, "Action":"DisplayForm"

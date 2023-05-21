@@ -487,11 +487,12 @@ option:not(:checked) {
   color: #FFFFFF;
   background-color: #FFA726;
   padding: 0.7em;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
   text-transform: uppercase; }
   .button:hover, .button--danger:hover, .button--reset:hover, .button--delete:hover, .button--save:hover, .button--add:hover, .button--edit:hover, .button--submit:hover {
     cursor: pointer;
-    background-color: #FFD95b; }
+    background-color: #FFD95b;
+    transform: scale(1.2); }
   .button::before, .button--danger::before, .button--reset::before, .button--delete::before, .button--save::before, .button--add::before, .button--edit::before, .button--submit::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -652,7 +653,7 @@ option:not(:checked) {
     flex-direction: row;
     margin-left: 5em;
     height: 100%; }
-    .nav__menu__item, .nav__menu__item--home, .nav__menu__item--blog, .nav__menu__item--event, .nav__menu__item--about, .nav__menu__item--calculator, .nav__menu__item--user-account, .nav__menu__item--administration {
+    .nav__menu__item, .nav__menu__item--real-estate, .nav__menu__item--calculator, .nav__menu__item--start, .nav__menu__item--spending, .nav__menu__item--stock-market, .nav__menu__item--crowdfunding, .nav__menu__item--sponsorship, .nav__menu__item--contact {
       display: inline-block;
       transition: background-color 0.3s;
       font-size: 0.9em;
@@ -662,29 +663,31 @@ option:not(:checked) {
       text-align: center;
       height: 100%;
       width: 10em; }
-      .nav__menu__item:hover, .nav__menu__item--home:hover, .nav__menu__item--blog:hover, .nav__menu__item--event:hover, .nav__menu__item--about:hover, .nav__menu__item--calculator:hover, .nav__menu__item--user-account:hover, .nav__menu__item--administration:hover {
+      .nav__menu__item:hover, .nav__menu__item--real-estate:hover, .nav__menu__item--calculator:hover, .nav__menu__item--start:hover, .nav__menu__item--spending:hover, .nav__menu__item--stock-market:hover, .nav__menu__item--crowdfunding:hover, .nav__menu__item--sponsorship:hover, .nav__menu__item--contact:hover {
         background-color: #FFA726;
         cursor: pointer; }
-      .nav__menu__item::before, .nav__menu__item--home::before, .nav__menu__item--blog::before, .nav__menu__item--event::before, .nav__menu__item--about::before, .nav__menu__item--calculator::before, .nav__menu__item--user-account::before, .nav__menu__item--administration::before {
+      .nav__menu__item::before, .nav__menu__item--real-estate::before, .nav__menu__item--calculator::before, .nav__menu__item--start::before, .nav__menu__item--spending::before, .nav__menu__item--stock-market::before, .nav__menu__item--crowdfunding::before, .nav__menu__item--sponsorship::before, .nav__menu__item--contact::before {
         font-family: "Font Awesome 5 Free";
         font-weight: 700;
         font-size: 2em;
         display: block;
         padding-bottom: 0.3em; }
-    .nav__menu__item--home::before {
+    .nav__menu__item--real-estate::before {
       content: "\f015"; }
-    .nav__menu__item--blog::before {
-      content: "\f075"; }
-    .nav__menu__item--event::before {
-      content: "\f133"; }
-    .nav__menu__item--about::before {
-      content: "\f129"; }
     .nav__menu__item--calculator::before {
       content: "\f1ec"; }
-    .nav__menu__item--user-account::before {
-      content: "\f007"; }
-    .nav__menu__item--administration::before {
-      content: "\f508"; }
+    .nav__menu__item--start::before {
+      content: "\f135"; }
+    .nav__menu__item--spending::before {
+      content: "\f153"; }
+    .nav__menu__item--stock-market::before {
+      content: "\e098"; }
+    .nav__menu__item--crowdfunding::before {
+      content: "\f1b3"; }
+    .nav__menu__item--sponsorship::before {
+      content: "\f06b"; }
+    .nav__menu__item--contact::before {
+      content: "\f0e0"; }
   .nav__logo {
     display: inline-block;
     font-size: 2.5em;
