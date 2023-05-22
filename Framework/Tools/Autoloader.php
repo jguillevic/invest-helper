@@ -6,6 +6,12 @@ class Autoloader
 {
 	public function Run()
 	{
+		$composerAutoloaderPath = join(DIRECTORY_SEPARATOR, array(__DIR__, '..', '..', 'vendor', 'autoload.php'));
+		if (file_exists($composerAutoloaderPath))
+		{
+			require_once($composerAutoloaderPath);
+		}
+
 		return spl_autoload_register([$this, 'LoadClass']);
 	}
 

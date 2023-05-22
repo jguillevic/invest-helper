@@ -1,0 +1,27 @@
+.contact
+{
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+	
+}
+
+@media screen and (min-width: 1025px) 
+{
+    .contact 
+    {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1201px) 
+{
+    .contact 
+    {
+        width: 40%;
+        margin-left: auto;
+	    margin-right: auto;
+    }
+}

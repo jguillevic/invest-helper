@@ -12,6 +12,12 @@
 		, "Name":"DisplayContact"
 	},
 	{
+		"Path":"/contact/send"
+		, "Controller":"Contact\\ContactController"
+		, "Action":"Send"
+		, "Name":"SendContact"
+	},
+	{
 		"Path":"/calculator/premium-tax"
 		, "Controller":"Calculator\\PremiumTax\\PremiumTaxCalculatorController"
 		, "Action":"DisplayForm"

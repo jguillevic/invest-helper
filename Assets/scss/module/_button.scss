@@ -2,24 +2,26 @@
 {
 	display: inline-block;
 	font-family: $text-font;
-	font-size: 1em;
+	font-size: 1.2em;
 	color: $main-light;
 	background-color: $main-color;
-	padding: 0.7em;
-	transition: background-color 0.3s, color 0.3s, transform 0.3s;
-	text-transform: uppercase;
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	transition: background-color 0.3s, color 0.3s;
+	border: 0;
 
 	&:hover
 	{
 		cursor: pointer;
 		background-color: $secondary-color;
-		transform: scale(1.2);
 	}
 
 	&::before
 	{
 		font-family: "Font Awesome 5 Free"; 
-		font-weight: 900;
+		font-size: 1em;
 		margin-right: 0.6em;
 	}
 }
@@ -174,20 +176,10 @@
 
 .button--mail
 {
-	@extend .button--social;
-
-	background-color: $googleplus-color;
-}
-
-.button--submit
-{
 	@extend .button;
 
-	&::after
+	&::before
 	{
-		font-family: "Font Awesome 5 Free"; 
-		font-weight: 700;
-		content: "\f054";
-		margin-left: 0.6em;
+		content: "\f1d8";
 	}
 }

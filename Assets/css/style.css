@@ -366,7 +366,8 @@ th {
   box-sizing: border-box;
   outline: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: "Roboto"; }
 
 button {
   background: none;
@@ -389,10 +390,9 @@ option:not(:checked) {
 
 /* Layout */
 .l-content {
-  width: 85%;
+  width: 100%;
   margin-left: auto;
-  margin-right: auto;
-  padding-top: 2em; }
+  margin-right: auto; }
 
 .l-footer {
   height: 50px;
@@ -406,6 +406,21 @@ option:not(:checked) {
   min-height: 800px; }
 
 /* Module */
+.contact {
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+@media screen and (min-width: 1025px) {
+  .contact {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; } }
+@media screen and (min-width: 1201px) {
+  .contact {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto; } }
 .home {
   width: 100%; }
   .home__container {
@@ -480,22 +495,24 @@ option:not(:checked) {
   .home__blog {
     width: 78%; }
 
-.button, .button--danger, .button--reset, .button--delete, .button--save, .button--add, .button--edit, .button--submit {
+.button, .button--danger, .button--reset, .button--delete, .button--save, .button--add, .button--edit, .button--mail {
   display: inline-block;
   font-family: "Roboto";
-  font-size: 1em;
+  font-size: 1.2em;
   color: #FFFFFF;
   background-color: #FFA726;
-  padding: 0.7em;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s;
-  text-transform: uppercase; }
-  .button:hover, .button--danger:hover, .button--reset:hover, .button--delete:hover, .button--save:hover, .button--add:hover, .button--edit:hover, .button--submit:hover {
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  transition: background-color 0.3s, color 0.3s;
+  border: 0; }
+  .button:hover, .button--danger:hover, .button--reset:hover, .button--delete:hover, .button--save:hover, .button--add:hover, .button--edit:hover, .button--mail:hover {
     cursor: pointer;
-    background-color: #FFD95b;
-    transform: scale(1.2); }
-  .button::before, .button--danger::before, .button--reset::before, .button--delete::before, .button--save::before, .button--add::before, .button--edit::before, .button--submit::before {
+    background-color: #FFD95b; }
+  .button::before, .button--danger::before, .button--reset::before, .button--delete::before, .button--save::before, .button--add::before, .button--edit::before, .button--mail::before {
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    font-size: 1em;
     margin-right: 0.6em; }
 
 .button--danger, .button--reset, .button--delete {
@@ -518,7 +535,7 @@ option:not(:checked) {
 .button--delete::before {
   content: "\f1f8"; }
 
-.button--social, .button--facebook, .button--twitter, .button--youtube, .button--instagram, .button--linkedin, .button--mail {
+.button--social, .button--facebook, .button--twitter, .button--youtube, .button--instagram, .button--linkedin {
   font-size: 1.5em;
   width: 100%;
   height: 4em;
@@ -528,7 +545,7 @@ option:not(:checked) {
   margin-left: 0.3em;
   margin-right: 0.3em;
   border-radius: 0.8em; }
-  .button--social::before, .button--facebook::before, .button--twitter::before, .button--youtube::before, .button--instagram::before, .button--linkedin::before, .button--mail::before {
+  .button--social::before, .button--facebook::before, .button--twitter::before, .button--youtube::before, .button--instagram::before, .button--linkedin::before {
     font-family: "Font Awesome 5 Brands";
     font-weight: 400;
     font-size: 2em;
@@ -537,7 +554,7 @@ option:not(:checked) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .button--social:hover, .button--facebook:hover, .button--twitter:hover, .button--youtube:hover, .button--instagram:hover, .button--linkedin:hover, .button--mail:hover {
+  .button--social:hover, .button--facebook:hover, .button--twitter:hover, .button--youtube:hover, .button--instagram:hover, .button--linkedin:hover {
     cursor: pointer;
     background-color: #FFA726; }
 
@@ -564,14 +581,8 @@ option:not(:checked) {
 .button--linkedin {
   background-color: #007BB6; }
 
-.button--mail {
-  background-color: #DD4B39; }
-
-.button--submit::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 700;
-  content: "\f054";
-  margin-left: 0.6em; }
+.button--mail::before {
+  content: "\f1d8"; }
 
 .content {
   background-color: transparent;
@@ -594,27 +605,49 @@ option:not(:checked) {
 .form {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   margin-left: auto;
-  margin-right: auto;
-  padding-top: 2em; }
-  .form-line {
+  margin-right: auto; }
+  .form__title {
+    width: 100%;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 3em;
+    margin-bottom: 0.5em; }
+  .form__subtitle {
+    width: 100%;
+    text-align: center;
     font-size: 1.2em;
-    margin: 0.5em;
+    margin-bottom: 4em; }
+  .form__line {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding-top: 0.5em; }
-    .form-line-label {
-      width: 50%;
-      text-align: right;
-      padding-right: 2%; }
-  .form-buttons {
+    font-size: 1.2em;
+    margin-bottom: 2em; }
+    .form__line__input {
+      padding: 0.7em;
+      width: 100%;
+      border: 1px #000000 solid; }
+      .form__line__input:focus {
+        border-color: #FFA726; }
+    .form__line__textarea {
+      resize: none; }
+    .form__line__checkbox > input[type=checkbox] {
+      width: 1.5em;
+      height: 1.5em;
+      vertical-align: bottom; }
+    .form__line__checkbox > label {
+      padding: 0.5em;
+      text-align: left; }
+  .form__buttons {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    margin-top: 2em;
+    width: 100%;
     margin-left: auto;
-    margin-right: auto;
-    padding-top: 2em; }
+    margin-right: auto; }
 
 .header {
   background-color: transparent; }
@@ -667,7 +700,7 @@ option:not(:checked) {
         background-color: #FFA726;
         cursor: pointer; }
       .nav__menu__item::before, .nav__menu__item--real-estate::before, .nav__menu__item--calculator::before, .nav__menu__item--start::before, .nav__menu__item--spending::before, .nav__menu__item--stock-market::before, .nav__menu__item--crowdfunding::before, .nav__menu__item--sponsorship::before, .nav__menu__item--contact::before {
-        font-family: "Font Awesome 5 Free";
+        font-family: "Font Awesome 6 Free";
         font-weight: 700;
         font-size: 2em;
         display: block;
@@ -792,28 +825,6 @@ option:not(:checked) {
       .nav__overlay__close:hover {
         color: #FFA726;
         cursor: pointer; }
-
-.result {
-  width: 40%;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 1em;
-  border: #FFA726;
-  background-color: #FFA726; }
-  .result-content {
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding: 1.5em; }
-    .result-content-block:not(:last-child) {
-      margin-bottom: 1em; }
-
-.h1 {
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: 0.1em solid #FFA726; }
 
 /* Theme */
 
