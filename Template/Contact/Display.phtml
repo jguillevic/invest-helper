@@ -1,5 +1,5 @@
 <section class="contact">
-    <form id="contact-form" class="form">
+    <form id="contact-form" class="form" method="POST">
         <h1 class="form__title">CONTACT</h1>
         <p class="form__subtitle">Pour toute question, remarque, ... n'hésitez pas à me l'envoyer à l'aide de ce formulaire.</p>
         <div class="form__line">
@@ -21,44 +21,51 @@
             </div>
         </div>
         <div class="form__buttons">
-            <button class="button--mail" type="submit">ENVOYER</button>
+            <button class="button--mail g-recaptcha" data-sitekey="6Lc_TTEmAAAAABY9Rhte9updZgNZq4Mxen_ZfSm3" data-callback='onSubmit' data-action='submit'>ENVOYER</button>
         </div>
     </form>
 </section>
 
+<!-- sweetalert2. -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+<!-- google recaptcha. -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
 <script>
-    var contactForm = $("#contact-form");
-    contactForm.on("submit", function(e)
+    let contactForm = $("#contact-form");   
+
+    function onSubmit(token)
     {
-    	e.preventDefault();
+        if (contactForm[0].reportValidity())
+        {
+            let url = new URL("/contact/send", window.location.origin);
 
-    	let url = new URL("/contact/send", window.location.origin);
-
-    	$.post(url, contactForm.serialize(), function(data) 
-    	{	
-    		var result = JSON.parse(data);
-
-      		if (result.success == true)
-            {
-                Swal.fire(
+    	    $.post(url, contactForm.serialize(), function(data) 
+    	    {	
+                console.log(data);
+    	    	var result = JSON.parse(data);
+            
+      	    	if (result.success == true)
                 {
-                    icon: 'success',
-                    title: 'Votre message a bien été envoyé.',
-                })
-
-                contactForm[0].reset();
-            }
-            else
-            {
-                Swal.fire(
+                    Swal.fire(
+                    {
+                        icon: 'success',
+                        title: 'Votre message a bien été envoyé.',
+                    })
+                
+                    contactForm[0].reset();
+                }
+                else
                 {
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Une erreur s\'est produite. Veuillez réessayer plus tard.'
-                })
-            }
-    	});
-    });    
+                    Swal.fire(
+                    {
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Une erreur s\'est produite. Veuillez réessayer plus tard.'
+                    })
+                }
+    	    });
+        }
+    }
 </script>

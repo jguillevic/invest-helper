@@ -18,6 +18,12 @@
 		, "Name":"SendContact"
 	},
 	{
+		"Path":"/sponsorship"
+		, "Controller":"Sponsorship\\SponsorshipController"
+		, "Action":"Display"
+		, "Name":"DisplaySponsorship"
+	},
+	{
 		"Path":"/calculator/premium-tax"
 		, "Controller":"Calculator\\PremiumTax\\PremiumTaxCalculatorController"
 		, "Action":"DisplayForm"
